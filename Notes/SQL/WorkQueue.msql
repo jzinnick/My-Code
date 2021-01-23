@@ -1,0 +1,36 @@
+[select *
+   from wrkque]
+[update wrkque
+    set effpri = ' 4 '
+  where effpri = ' 50 ']
+[select wrksts,
+        effpri,
+        srcloc,
+        asg_usr_id,
+        loctrvseq,
+        ack_usr_id
+   from wrkque
+        where wrksts = 'SUSP']
+[update wrkque
+    set asg_usr_id = 'JONATHAN'
+  where srcloc like 'BULK%']
+[update wrkque
+    set asg_usr_id = 'ELSA ZAMORA'
+  where srcloc like ' 10% ']
+[update wrkque
+    set asg_usr_id = 'JENNY-DELACRUZ'
+  where srcloc Like 'L%']
+[update wrkque
+    set asg_usr_id = 'GEORGE-MUELLER'
+  where srcloc like '12%']
+[update wrkque
+    set asg_usr_id = 'PATTI-MUELLER'
+  where srcloc like '112%']
+[update wrkque
+    set asg_usr_id = NULL
+  where asg_usr_id = 'JONATHAN']
+[select count(srcloc),
+        asg_usr_id
+   from wrkque
+  where wrksts = 'PEND'
+  group by asg_usr_id]

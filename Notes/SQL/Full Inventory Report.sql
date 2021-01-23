@@ -1,0 +1,10 @@
+list inventory summarized by location for display
+ WHERE adjflg = '0'
+   AND invsts = 'A'
+   AND arecod != 'DAMG'
+   AND arecod != 'RSTG'
+   AND arecod != 'FSTG'
+   AND arecod != 'RDTS'
+   AND wh_id = 'WMD1'
+   AND fwiflg = '1'
+   AND find_matching_kits = '0'

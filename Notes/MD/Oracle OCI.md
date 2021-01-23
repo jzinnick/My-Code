@@ -1,0 +1,17 @@
+WMSEDWD =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = wmsdw02.atcle.com)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = WMSEDWD)
+    )
+  )
+
+WMSEDWP =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = wmsdw01.atcle.com)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = WMSEDWP)
+    )
+  )
